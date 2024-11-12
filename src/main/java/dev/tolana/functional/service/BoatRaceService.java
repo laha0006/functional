@@ -17,14 +17,13 @@ public class BoatRaceService {
 
 
     public List<BoatRace> createBoatRacesFromRange(LocalDate startDate, LocalDate endDate) {
-        List<BoatRace> boatRaces = startDate.datesUntil(endDate)
+        return startDate.datesUntil(endDate)
                 .filter(date -> date.getDayOfWeek() == DayOfWeek.WEDNESDAY)
                 .map(date -> BoatRace.builder()
                         .date(date)
                         .boatType(BoatType.MEDIUM)
                         .build())
                 .toList();
-        return boatRaces;
     }
 
 }
