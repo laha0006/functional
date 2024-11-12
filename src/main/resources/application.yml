@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: FunctionalApplication
+
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:13306/jpa_test
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
